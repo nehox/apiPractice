@@ -6,6 +6,8 @@ target 'ApiPractice' do
   use_frameworks!
 
   # Pods for ApiPractice
+  pod "PromiseKit", "~> 6.3.4"
+  pod 'Alamofire', '5.4.0'
 
   target 'ApiPracticeTests' do
     inherit! :search_paths

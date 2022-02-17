@@ -2,11 +2,6 @@
 //  Beer.swift
 //  ApiPractice
 //
-//  Created by jficerai on 25/02/2021.
-//
-
-import Foundation
-
 
 class Beer {
     

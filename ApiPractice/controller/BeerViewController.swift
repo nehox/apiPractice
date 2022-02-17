@@ -11,18 +11,28 @@ import SwiftyJSON
 
 class BeerViewController: UITableViewController {
     
-    
+    //MARK: - Variables
     var beers: [Beer] = []
     
+    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Beer List"
-        
         refreshBeerList()
-        
-        
     }
+    
+    //MARK: - Custom Functions
+    func refreshBeerList() {
+        self.beers.removeAll()
+        BeerApi.getBeers().done { beersResponse in
+            self.beers = beersResponse
+            self.tableView.reloadData()
+        }
+    }
+    
+    
+    //MARK: - Datasource
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "beerCell")
@@ -46,26 +56,8 @@ class BeerViewController: UITableViewController {
         self.performSegue(withIdentifier: "segueToBeerDescription", sender: beers[indexPath.row])
     }
     
-    func refreshBeerList() {
-        
-        self.beers.removeAll()
-
-        AF.request("https://api.punkapi.com/v2/beers").response { response in
-            let json = JSON(response.data)
-            
-            let beersJSON = json.arrayValue
-            
-            for beer in beersJSON {
-                self.beers.append(Beer(name: beer["name"].stringValue,
-                                       degree: beer["abv"].stringValue,
-                                       description: beer["description"].stringValue,
-                                       pictureUrl: beer["image_url"].stringValue)
-                )
-            }
-            self.tableView.reloadData()
-        }
-    }
     
+    //MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToBeerDescription" {
             

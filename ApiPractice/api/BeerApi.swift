@@ -17,7 +17,9 @@ class BeerApi {
             
             // On fait l'appel dans la promesse
             AF.request("https://api.punkapi.com/v2/beers").response { response in
-                let json = JSON(response.data)
+                
+                
+               let json = JSON(response.data)
                 let beersJSON = json.arrayValue
                 for beer in beersJSON {
                     beers.append(Beer(name: beer["name"].stringValue,

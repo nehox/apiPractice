@@ -22,6 +22,7 @@
 		AABC5EA525E5A8B5003E3561 /* ApiPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5EA425E5A8B5003E3561 /* ApiPracticeTests.swift */; };
 		AABC5EB025E5A8B5003E3561 /* ApiPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC5EAF25E5A8B5003E3561 /* ApiPracticeUITests.swift */; };
 		AADBFC6227BEF3D200C2CF14 /* BeerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADBFC6127BEF3D200C2CF14 /* BeerApi.swift */; };
+		AADBFC6427BF02CD00C2CF14 /* BeerRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADBFC6327BF02CD00C2CF14 /* BeerRandomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		AABC5EAF25E5A8B5003E3561 /* ApiPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPracticeUITests.swift; sourceTree = "<group>"; };
 		AABC5EB125E5A8B5003E3561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AADBFC6127BEF3D200C2CF14 /* BeerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerApi.swift; sourceTree = "<group>"; };
+		AADBFC6327BF02CD00C2CF14 /* BeerRandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRandomViewController.swift; sourceTree = "<group>"; };
 		C87477BB1656E15772A68FC1 /* Pods-ApiPracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiPracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-ApiPracticeTests/Pods-ApiPracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCD323FC1D16702AD1C66CA0 /* Pods_ApiPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C0D56C357C8CF8341A6BA0 /* Pods_ApiPractice_ApiPracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiPractice_ApiPracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +189,7 @@
 			children = (
 				AA16F00025E84E4F002BE71B /* BeerViewController.swift */,
 				AA16F01C25E85930002BE71B /* BeerDescriptionViewController.swift */,
+				AADBFC6327BF02CD00C2CF14 /* BeerRandomViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				AABC5E8E25E5A8B4003E3561 /* AppDelegate.swift in Sources */,
 				AADBFC6227BEF3D200C2CF14 /* BeerApi.swift in Sources */,
 				AABC5E9025E5A8B4003E3561 /* SceneDelegate.swift in Sources */,
+				AADBFC6427BF02CD00C2CF14 /* BeerRandomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,20 +19,41 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4y-xl-7pv">
                                 <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.4941176471" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="WJd-sb-tmC"/>
                                     <constraint firstAttribute="width" constant="100" id="nhD-7M-OZf"/>
                                 </constraints>
-                                <state key="normal" title="BIere List"/>
+                                <state key="normal" title="Beers List">
+                                    <color key="titleColor" red="0.1019607843" green="0.18039215689999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.40000000000000002" green="0.4941176471" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Et1-Sx-WVh" kind="show" id="q6O-tg-YfC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6N-qa-uNT">
+                                <rect key="frame" x="157" y="514" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.4941176471" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Swm-cs-3yx"/>
+                                    <constraint firstAttribute="width" constant="100" id="y3D-yy-tcf"/>
+                                </constraints>
+                                <state key="normal" title="Random beer">
+                                    <color key="titleColor" red="0.1019607843" green="0.18039215689999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.40000000000000002" green="0.4941176471" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uot-jN-z8j" kind="show" id="atl-9t-lH5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="X6N-qa-uNT" firstAttribute="top" secondItem="r4y-xl-7pv" secondAttribute="bottom" constant="16" id="3j2-vQ-otz"/>
                             <constraint firstItem="r4y-xl-7pv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cnr-jk-lSx"/>
+                            <constraint firstItem="X6N-qa-uNT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yi0-4o-e0h"/>
                             <constraint firstItem="r4y-xl-7pv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cud-39-hPR"/>
                         </constraints>
                     </view>
@@ -40,6 +61,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-142" y="100"/>
+        </scene>
+        <!--Beer Random View Controller-->
+        <scene sceneID="LQ8-cL-r0Q">
+            <objects>
+                <viewController id="uot-jN-z8j" customClass="BeerRandomViewController" customModule="ApiPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Na4-R7-exz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WkV-OT-OGc">
+                                <rect key="frame" x="16" y="118" width="382" height="624"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVz-P8-ElG">
+                                <rect key="frame" x="16" y="54" width="382" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emA-9P-O0K">
+                                <rect key="frame" x="16" y="760" width="382" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="o1y-9F-bbU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ramdom beeeer"/>
+                                <connections>
+                                    <action selector="randomize:" destination="uot-jN-z8j" eventType="touchUpInside" id="rAj-kh-H62"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Okm-0G-eep"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pVz-P8-ElG" firstAttribute="top" secondItem="Okm-0G-eep" secondAttribute="top" constant="54" id="JRn-wJ-ztO"/>
+                            <constraint firstItem="Okm-0G-eep" firstAttribute="trailing" secondItem="emA-9P-O0K" secondAttribute="trailing" constant="16" id="K4b-VY-Ye9"/>
+                            <constraint firstItem="emA-9P-O0K" firstAttribute="top" secondItem="WkV-OT-OGc" secondAttribute="bottom" constant="18" id="M3l-lE-x47"/>
+                            <constraint firstItem="pVz-P8-ElG" firstAttribute="leading" secondItem="Okm-0G-eep" secondAttribute="leading" constant="16" id="ONy-U3-JIj"/>
+                            <constraint firstItem="WkV-OT-OGc" firstAttribute="top" secondItem="pVz-P8-ElG" secondAttribute="bottom" constant="64" id="UGe-CE-SyJ"/>
+                            <constraint firstItem="WkV-OT-OGc" firstAttribute="leading" secondItem="Okm-0G-eep" secondAttribute="leading" constant="16" id="UlX-bu-GKF"/>
+                            <constraint firstItem="Okm-0G-eep" firstAttribute="trailing" secondItem="pVz-P8-ElG" secondAttribute="trailing" constant="16" id="b1C-UP-EDl"/>
+                            <constraint firstItem="Okm-0G-eep" firstAttribute="trailing" secondItem="WkV-OT-OGc" secondAttribute="trailing" constant="16" id="b3I-He-7df"/>
+                            <constraint firstItem="emA-9P-O0K" firstAttribute="leading" secondItem="Okm-0G-eep" secondAttribute="leading" constant="16" id="dyo-BF-SaU"/>
+                            <constraint firstItem="Okm-0G-eep" firstAttribute="bottom" secondItem="emA-9P-O0K" secondAttribute="bottom" constant="16" id="e07-31-eFG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ym1-1g-N4t"/>
+                    <connections>
+                        <outlet property="pictureImageView" destination="WkV-OT-OGc" id="lxc-va-ast"/>
+                        <outlet property="randomButton" destination="emA-9P-O0K" id="dUP-vd-8Ah"/>
+                        <outlet property="titleLabel" destination="pVz-P8-ElG" id="pJP-Ii-VWp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPf-nM-JUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="811"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="c6b-G4-KNp">
